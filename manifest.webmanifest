@@ -1,0 +1,9 @@
+{
+  "name": "Paisatenso",
+  "short_name": "Paisatenso",
+  "description": "Everyday Paisa, Rioplatense, Honduran and Puerto Rican Spanish.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#111418",
+  "theme_color": "#111418"
+}

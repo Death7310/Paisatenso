@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Paisatenso</title>
+  <meta name="description" content="Learn everyday Paisa, Rioplatense, Honduran and Puerto Rican Spanish with evidence-based practice.">
+  <meta name="theme-color" content="#111418">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand"><a href="#/">Paisatenso</a></div>
+    <div id="dialects" class="dialects" role="tablist" aria-label="Dialect"></div>
+  </header>
+
+  <nav id="nav" class="nav">
+    <a href="#/" data-view="home">Home</a>
+    <a href="#/learn" data-view="learn">Learn</a>
+    <a href="#/speak" data-view="speak">Speak</a>
+    <a href="#/listen" data-view="listen">Listen</a>
+    <a href="#/read" data-view="read">Read</a>
+    <a href="#/test" data-view="test">Test</a>
+    <a href="#/guide" data-view="guide">Guide</a>
+    <a href="#/method" data-view="method">Method</a>
+  </nav>
+
+  <main id="main"></main>
+  <div id="toast" class="toast" role="status"></div>
+
+  <template id="method-template">
+    <section class="card">
+      <h2>Method: what this app does, and why</h2>
+      <p>Every activity maps to a practice with strong empirical support in cognitive psychology or second language acquisition (SLA) research. Where the evidence is thinner, it says so.</p>
+    </section>
+
+    <section class="card">
+      <h3>1 · Spaced retrieval — <a href="#/learn">Learn</a></h3>
+      <p>Phrases come back at expanding intervals, and you must <i>recall</i> them before seeing the answer. Distributed practice and practice testing are the two learning techniques rated "high utility" in the largest review of study methods, and spacing reliably improves L2 vocabulary retention.</p>
+      <p class="cite">Cepeda et al. (2006), <i>Psychological Bulletin</i> 132(3) · Roediger &amp; Karpicke (2006), <i>Psychological Science</i> 17(3) · Dunlosky et al. (2013), <i>Psychological Science in the Public Interest</i> 14(1) · Kim &amp; Webb (2022), <i>Language Learning</i> 72(1)</p>
+    </section>
+
+    <section class="card">
+      <h3>2 · Production first, in chunks</h3>
+      <p>Reviews default to English → dialect, because productive retrieval builds the knowledge you need to speak, and producing output makes you notice gaps that input alone hides. Items are whole phrases ("¿Me regala un tinto?") rather than isolated words: conversation runs on prefabricated chunks.</p>
+      <p class="cite">Swain (1985), output hypothesis, in Gass &amp; Madden (eds.), <i>Input in SLA</i> · Webb (2009), <i>RELC Journal</i> 40(3) · Wray (2002), <i>Formulaic Language and the Lexicon</i> · Boers &amp; Lindstromberg (2012), <i>Annual Review of Applied Linguistics</i> 32</p>
+    </section>
+
+    <section class="card">
+      <h3>3 · Explicit attention to dialect features — <a href="#/guide">Guide</a></h3>
+      <p>Meta-analyses find explicit instruction outperforms purely implicit exposure. Knowing in advance that Puerto Rican "puelta" is <i>puerta</i>, or that porteño "sho" is <i>yo</i>, makes those sounds decodable instead of noise.</p>
+      <p class="cite">Norris &amp; Ortega (2000), <i>Language Learning</i> 50(3) · Spada &amp; Tomita (2010), <i>Language Learning</i> 60(2)</p>
+    </section>
+
+    <section class="card">
+      <h3>4 · Task-based speaking — <a href="#/speak">Speak</a></h3>
+      <p>Role-plays are real situations from your life — school, the Marines, food, plans — with model answers to compare against. Task-based teaching shows positive effects in meta-analysis. Shadowing (listen, repeat, record, compare) targets rhythm and intonation; pronunciation instruction is effective overall, while evidence for shadowing specifically comes from smaller studies, mostly on listening.</p>
+      <p class="cite">Long (2015), <i>SLA and Task-Based Language Teaching</i> · Bryfonski &amp; McKay (2019), <i>Language Teaching Research</i> 23(5) · Lee, Jang &amp; Plonsky (2015), <i>Applied Linguistics</i> 36(3) · Derwing &amp; Munro (2015), <i>Pronunciation Fundamentals</i> · Hamada (2016), <i>Language Teaching Research</i> 20(1)</p>
+    </section>
+
+    <section class="card">
+      <h3>5 · Listening — <a href="#/listen">Listen</a></h3>
+      <p>Audio first, transcript after: you predict and check, then read along to notice what you missed. Dictation trains the bottom-up skill of splitting fast speech into words — the main bottleneck for learners facing Caribbean and Central American speech.</p>
+      <p class="cite">Vandergrift &amp; Goh (2012), <i>Teaching and Learning Second Language Listening</i> · Field (2008), <i>Listening in the Language Classroom</i></p>
+    </section>
+
+    <section class="card">
+      <h3>6 · Reading with light glossing — <a href="#/read">Read</a></h3>
+      <p>Comfortable reading needs roughly 95–98% of the words to be known; tap-glosses fill the gap without pulling you out of the text. Texts lean on your interests (history, service) because engagement drives time on task.</p>
+      <p class="cite">Hu &amp; Nation (2000), <i>Reading in a Foreign Language</i> 13(1) · Nation (2013), <i>Learning Vocabulary in Another Language</i> (2nd ed.) · Jeon &amp; Day (2016), <i>Reading in a Foreign Language</i> 28(2)</p>
+    </section>
+
+    <section class="card">
+      <h3>7 · Testing production and reception separately — <a href="#/test">Test</a></h3>
+      <p>Receptive knowledge runs ahead of productive knowledge, so one blended score would hide where you're weak. The test reports both and tells you which to shift time toward.</p>
+      <p class="cite">Laufer &amp; Goldstein (2004), <i>Language Learning</i> 54(3)</p>
+    </section>
+
+    <section class="card warnbox">
+      <h3>What this app cannot do</h3>
+      <ul>
+        <li><b>Interaction and correction.</b> Negotiating meaning with a real person, and getting corrected, has strong meta-analytic support. No app replaces it. Your Honduran and Puerto Rican friends are your best resource: use this week's phrases with them and ask them to correct you on the spot.<br>
+          <span class="cite">Long (1996), in Ritchie &amp; Bhatia (eds.), <i>Handbook of SLA</i> · Mackey &amp; Goo (2007), in Mackey (ed.), <i>Conversational Interaction in SLA</i> · Lyster &amp; Saito (2010), <i>SSLA</i> 32(2) · Li (2010), <i>Language Learning</i> 60(2)</span></li>
+        <li><b>Authentic accents.</b> Device voices are generic Spanish at best. They're fine for learning words and rhythm, but not for training your ear to a dialect. Add real audio every week: podcasts, YouTube, music and TV from each region.</li>
+        <li><b>Input alone isn't enough.</b> Krashen's comprehensible-input hypothesis was hugely influential, but its strong form ("input is sufficient") is widely criticized as untestable. Input is necessary; output, feedback and explicit attention close the gaps.<br>
+          <span class="cite">Krashen (1985), <i>The Input Hypothesis</i> · McLaughlin (1987), <i>Theories of Second-Language Learning</i></span></li>
+        <li><b>Slang moves.</b> Content is drawn from dialectology references and common usage, but slang shifts by age, neighborhood and year. Treat your friends as the final authority.<br>
+          <span class="cite">Lipski (1994), <i>Latin American Spanish</i> · Hualde (2005), <i>The Sounds of Spanish</i> · ASALE (2010), <i>Diccionario de americanismos</i> · Flórez (1957), <i>Habla y cultura popular en Antioquia</i> · Fontanella de Weinberg (1987), <i>El español bonaerense</i> · López Morales (1983), <i>Estratificación social del español de San Juan de Puerto Rico</i></span></li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h3>How to split your time across four dialects</h3>
+      <p>Most of what you learn transfers across all four — the core grammar and most vocabulary are shared. But splitting <i>production</i> four ways early on slows each one down and invites mixing (vos and tú in the same sentence). A sounder plan:</p>
+      <ol>
+        <li><b>Pick one production dialect per block of weeks</b> — the one you'll speak most. Given your friends, Catracho or Boricua is the practical choice.</li>
+        <li><b>Keep the others receptive</b>: Listen and Read sessions only, plus the Guide.</li>
+        <li><b>Rotate</b> once your test production score in the first holds above ~80%.</li>
+      </ol>
+      <p>Daily, ~25 minutes: Learn (10) → Speak (5–10) → Listen or Read (5–10). Weekly: one test per active dialect, and at least one real conversation.</p>
+    </section>
+  </template>
+
+  <script src="js/core.js"></script>
+  <script src="js/data/paisa.js"></script>
+  <script src="js/data/rioplatense.js"></script>
+  <script src="js/data/catracho.js"></script>
+  <script src="js/data/boricua.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/srs.js"></script>
+  <script src="js/speech.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

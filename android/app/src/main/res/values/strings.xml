@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Paisatenso</string>
+    <string name="title_activity_main">Paisatenso</string>
+    <string name="package_name">com.paisatenso.app</string>
+    <string name="custom_url_scheme">com.paisatenso.app</string>
+</resources>

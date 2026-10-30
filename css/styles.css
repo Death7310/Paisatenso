@@ -31,7 +31,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  padding-bottom: 4rem;
+  padding-bottom: calc(4rem + env(safe-area-inset-bottom, 0px));
 }
 
 a { color: inherit; }
@@ -42,7 +42,7 @@ a { color: inherit; }
   z-index: 10;
   background: var(--surface);
   border-bottom: 1px solid var(--line);
-  padding: 0.5rem 1rem;
+  padding: calc(0.5rem + env(safe-area-inset-top, 0px)) 1rem 0.5rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;

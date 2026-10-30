@@ -31,6 +31,23 @@ The app has no build step and no dependencies. Do one of the following:
 
 Use Chrome or Edge to get speech recognition (🎤). In other browsers you can type your answers. Text-to-speech uses your device's voices. Install Spanish voices (es-CO, es-AR, es-US, etc.) in your OS settings for better audio. The Home screen tells you which voice is being used for each dialect.
 
+## Android app (APK)
+
+The repo includes an Android wrapper built with [Capacitor](https://capacitorjs.com). In the APK, the app uses Android's native text-to-speech and speech recognition, because the Android WebView doesn't support the browser speech APIs.
+
+**To install:** GitHub Actions builds an APK on every push. On your phone, open the repo's **Releases** page, download `Paisatenso.apk` from the latest release, open it, and allow "Install unknown apps" for your browser when asked. Each new build installs over the previous one and keeps your progress, because every build is signed with the same key, which is committed to the repo.
+
+**For better audio:** go to Android Settings → *Text-to-speech output*, choose *Speech Services by Google*, and install Spanish voice data. Speech recognition needs the Google app to be enabled.
+
+**To build locally** (requires the Android SDK and JDK 21):
+
+```sh
+npm ci
+npm run android:apk   # → android/app/build/outputs/apk/debug/app-debug.apk
+```
+
+The committed signing key is fine for sideloading. Before publishing to Google Play, switch to a private release key that is kept out of git.
+
 ## Honest limitations
 
 - Device voices are generic and do not reproduce dialect accents faithfully. Add authentic audio from each region every week.

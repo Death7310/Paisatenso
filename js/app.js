@@ -202,11 +202,23 @@
     $('#set-rate').onchange = (e) => S.saveSettings({ rate: Number(e.target.value) });
     $('#set-new').onchange = (e) => { S.saveSettings({ newPerDay: Number(e.target.value) }); viewHome(); };
     $('#set-dir').onchange = (e) => S.saveSettings({ direction: e.target.value });
-    $('#export').onclick = () => {
-      const blob = new Blob([JSON.stringify(S.exportAll(), null, 2)], { type: 'application/json' });
+    $('#export').onclick = async () => {
+      const json = JSON.stringify(S.exportAll(), null, 2);
+      const name = `paisatenso-backup-${today()}.json`;
+      if (PT.speech.native) {
+        // WebView can't download blobs: write a file and open the share sheet.
+        try {
+          const { Filesystem, Share } = window.Capacitor.Plugins;
+          const { uri } = await Filesystem.writeFile({ path: name, data: json, directory: 'CACHE', encoding: 'utf8' });
+          await Share.share({ title: 'Paisatenso backup', files: [uri] });
+        } catch (err) {
+          toast('Export failed: ' + err.message);
+        }
+        return;
+      }
       const a = document.createElement('a');
-      a.href = URL.createObjectURL(blob);
-      a.download = `paisatenso-backup-${today()}.json`;
+      a.href = URL.createObjectURL(new Blob([json], { type: 'application/json' }));
+      a.download = name;
       a.click();
       URL.revokeObjectURL(a.href);
     };
